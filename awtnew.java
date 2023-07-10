@@ -304,6 +304,7 @@ public class EmployeeUI extends Frame {
         	PrintWriter writer = new PrintWriter(new FileWriter("D:\\employee_data.txt",false)) ;
             for (Employee employee : employeeList) {
                 writer.println(employee.getName() + "," + employee.getRoll() + "," +employee.getSalary() + "," + employee.getDepartment() + "," + employee.getJob());
+                writer.flush();
             }
         } catch (IOException e) {
             e.printStackTrace();
